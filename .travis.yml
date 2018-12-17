@@ -17,3 +17,7 @@ deploy:
   provider: surge
   project: build/reports/
   domain: 2018-scm-reports-andrea.surge.sh
+  on:
+     all_branches: true
+     skip_cleanup: true
+     
