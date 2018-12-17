@@ -1,5 +1,11 @@
 language: java
 
+jdk:
+  - openjdk7
+  - openjdk8
+  - oraclejdk9 
+
+
 env:
   global:
    - SURGE_LOGIN=langeliandrea@gmail.com
