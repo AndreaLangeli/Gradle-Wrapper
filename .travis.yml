@@ -1,9 +1,17 @@
 language: java
 
-# Disable Travis install phase
-install: 
+env:
+  global:
+   - SURGE_LOGIN=langeliandrea@gmail.com
+   - secure 
+   
+install:
   - echo "Do nothing"
 
-# Execute our custom build
 script:
-  - ./gradlew clean buildDashboard
+  - ./gradlew clean buildDashboard  
+   
+deploy:
+  provider: surge
+  project: build/reports/
+  domain: 2018-scm-reports-andrea.surge.sh
